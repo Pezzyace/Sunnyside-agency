@@ -43,6 +43,23 @@ footer, .hero-section header {
 }
 .hero-section nav .mobile-nav {
   display: none;
+  position: relative;
+}
+.hero-section nav .mobile-nav .direction {
+  display: none;
+}
+@media screen and (max-width: 375px) {
+  .hero-section nav .mobile-nav .direction {
+    display: inline-block;
+    position: absolute;
+    height: 0;
+    width: 0;
+    right: 0;
+    top: -25px;
+    border-right: 25px solid hsl(0, 0%, 100%);
+    border-bottom: 25px solid transparent;
+    border-top: 25px solid transparent;
+  }
 }
 @media screen and (max-width: 375px) {
   .hero-section nav .mobile-nav {
@@ -405,6 +422,11 @@ footer, .hero-section header {
   flex-direction: column;
   padding: 100px 0;
 }
+@media screen and (max-width: 375px) {
+  .testimony-container {
+    padding: 50px 0;
+  }
+}
 .testimony-container h3 {
   font-family: "Fraunces", serif;
   letter-spacing: 3px;
@@ -418,13 +440,31 @@ footer, .hero-section header {
   width: 70%;
   gap: 30px;
 }
+@media screen and (max-width: 375px) {
+  .testimony-container div {
+    flex-direction: column;
+    width: 100%;
+  }
+}
 .testimony-container div article {
   flex-direction: column;
+}
+@media screen and (max-width: 375px) {
+  .testimony-container div article {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
 }
 .testimony-container div article img {
   height: 50px;
   margin-bottom: 50px;
   border-radius: 50%;
+}
+@media screen and (max-width: 375px) {
+  .testimony-container div article img {
+    margin-bottom: 20px;
+  }
 }
 .testimony-container div article :nth-child(2) {
   text-align: center;
@@ -432,6 +472,14 @@ footer, .hero-section header {
   margin-bottom: 40px;
   font-family: "Barlow", sans-serif;
   color: hsl(212, 27%, 19%);
+}
+@media screen and (max-width: 375px) {
+  .testimony-container div article :nth-child(2) {
+    width: 85%;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
 }
 .testimony-container div article :nth-child(3) {
   font-size: 15px;
@@ -452,26 +500,51 @@ footer, .hero-section header {
   overflow: hidden;
   position: relative;
 }
+@media screen and (max-width: 375px) {
+  .pictures-section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .pictures-section :nth-child(1) {
   background: url(/images/desktop/image-gallery-milkbottles.jpg) no-repeat;
   background-size: cover;
   height: 70vh;
+}
+@media screen and (max-width: 375px) {
+  .pictures-section :nth-child(1) {
+    height: 187px;
+  }
 }
 .pictures-section :nth-child(2) {
   background: url(/images/desktop/image-gallery-orange.jpg) no-repeat;
   background-size: cover;
   height: 70vh;
 }
+@media screen and (max-width: 375px) {
+  .pictures-section :nth-child(2) {
+    height: 187px;
+  }
+}
 .pictures-section :nth-child(3) {
   background: url(/images/desktop/image-gallery-cone.jpg) no-repeat;
   background-size: cover;
   height: 70vh;
+}
+@media screen and (max-width: 375px) {
+  .pictures-section :nth-child(3) {
+    height: 187px;
+  }
 }
 .pictures-section :nth-child(4) {
   background: url(/images/desktop/image-gallery-sugarcubes.jpg) no-repeat;
   background-size: cover;
   height: 70vh;
   overflow: hidden;
+}
+@media screen and (max-width: 375px) {
+  .pictures-section :nth-child(4) {
+    height: 187px;
+  }
 }
 
 footer {
@@ -487,11 +560,21 @@ footer ul {
   gap: 50px;
   margin-bottom: 50px;
 }
+@media screen and (max-width: 375px) {
+  footer ul {
+    margin-bottom: 70px;
+  }
+}
 footer ul li {
   color: hsl(168, 45%, 32%);
   font-family: "Barlow", sans-serif;
   cursor: pointer;
   transition: 0.5s;
+}
+@media screen and (max-width: 375px) {
+  footer ul li {
+    font-size: 1.5rem;
+  }
 }
 footer ul li:hover {
   color: hsl(0, 0%, 100%);
@@ -501,9 +584,19 @@ footer div {
   align-items: center;
   margin-bottom: 50px;
 }
+@media screen and (max-width: 375px) {
+  footer div {
+    margin-bottom: 30px;
+  }
+}
 footer div svg {
   margin-right: 15px;
   transition: 0.5s;
+}
+@media screen and (max-width: 375px) {
+  footer div svg {
+    margin-right: 20px;
+  }
 }
 footer div path {
   transition: 0.5s;

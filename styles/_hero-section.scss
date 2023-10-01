@@ -46,6 +46,24 @@
 
     .mobile-nav{
       display: none;
+      position: relative;
+
+      .direction{
+        display: none;
+        
+
+        @include mobile{
+          display: inline-block;
+          position: absolute;
+          height: 0;
+          width: 0;
+          right: 0;
+          top: -25px;
+          border-right: 25px solid $crack;
+          border-bottom: 25px solid transparent;
+          border-top: 25px solid transparent;
+        }
+      }
 
       @include mobile{
         display: none;

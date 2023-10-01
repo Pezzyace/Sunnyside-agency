@@ -1,4 +1,5 @@
 @import 'colors';
+@import 'media-quires';
 
 .pictures-section{
   display: grid;
@@ -6,26 +7,47 @@
   width: 100vw;
   overflow: hidden;
   position: relative;
+  
+  @include mobile{
+    grid-template-columns: 1fr 1fr;
+  }
 
   :nth-child(1){
     background: url(/images/desktop/image-gallery-milkbottles.jpg) no-repeat;
     background-size: cover;
     height: 70vh;
+   
+
+    @include mobile{
+      height: 187px;
+    }
   }
   :nth-child(2){
     background: url(/images/desktop/image-gallery-orange.jpg) no-repeat;
     background-size: cover;
     height: 70vh;
+
+    @include mobile{
+      height: 187px;
+    }
   }
   :nth-child(3){
     background: url(/images/desktop/image-gallery-cone.jpg) no-repeat;
     background-size: cover;
     height: 70vh;
+
+    @include mobile{
+      height: 187px;
+    }
   }
   :nth-child(4){
     background: url(/images/desktop/image-gallery-sugarcubes.jpg) no-repeat;
     background-size: cover;
     height: 70vh;
     overflow: hidden;
+
+    @include mobile{
+      height: 187px;
+    }
   }
 }

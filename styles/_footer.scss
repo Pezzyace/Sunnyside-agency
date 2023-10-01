@@ -5,20 +5,30 @@ footer{
   flex-direction: column;
   background-color: hsl(167, 49%, 58%);
   padding: 50px 0 0 0;
+  
 
   svg{
     margin-bottom: 30px;
+
   }
   ul{
     display: flex;
     gap: 50px;
     margin-bottom: 50px;
 
+    @include mobile{
+      margin-bottom: 70px;
+    }
+
     li{
       color: hsl(168, 45%, 32%);
       font-family: 'Barlow', sans-serif;
       cursor: pointer;
       transition: .5s;
+
+      @include mobile{
+        font-size: 1.5rem;
+      }
     }
     li:hover{
       color: $crack;
@@ -29,9 +39,17 @@ footer{
     align-items: center;
     margin-bottom: 50px;
 
+    @include mobile{
+      margin-bottom: 30px;
+     }
+
     svg{
       margin-right: 15px;
       transition: 0.5s;
+
+      @include mobile{
+        margin-right: 20px;
+      }
     }
     path{
       transition: .5s;

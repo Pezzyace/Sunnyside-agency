@@ -14,7 +14,7 @@
   <section class="hero-section">
     <nav>
       <img src="images/logo.svg" alt="logo">
-      <img src="/images/icon-hamburger.svg" alt="" class="hamburger">
+      <img src="/images/icon-hamburger.svg" alt="" class="hamburger" id="hamburger">
       <div class="desktop-nav">
         <div>
           <ul>
@@ -25,14 +25,15 @@
           <button>Contact</button>
         </div>
       </div>
-      <div class="mobile-nav">
+      <div class="mobile-nav" id="mobile-nav">
+        <div class="direction"></div>
         <div>
           <ul>
             <li>About</li>
             <li>Services</li>
             <li>Projects</li>
           </ul>
-          <button>Contact</button>
+          <button id="body">Contact</button>
         </div>
       </div>
     </nav>
@@ -121,5 +122,7 @@
      
     </div>
   </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>

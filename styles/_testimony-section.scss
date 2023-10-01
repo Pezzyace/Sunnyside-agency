@@ -1,9 +1,14 @@
 @import 'colors';
+@import 'media-quires';
 
 .testimony-container{
   @extend %flex2;
   flex-direction: column;
   padding: 100px 0;
+
+  @include mobile {
+    padding: 50px 0;
+  }
 
   h3{
     font-family: 'Fraunces', serif;
@@ -19,14 +24,29 @@
     width: 70%;
     gap: 30px;
     
+    @include mobile{
+      flex-direction: column;
+      width: 100%;
+    }
+    
     article{
       @extend %flex2;
       flex-direction: column;
+
+      @include mobile{
+        width: 80%;
+        margin: 0 auto;
+        padding-bottom: 20px;
+      }
 
       img{
         height: 50px;
         margin-bottom: 50px;
         border-radius: 50%;
+
+        @include mobile{
+          margin-bottom: 20px;
+        }
       }
       :nth-child(2){
         text-align: center;
@@ -34,6 +54,13 @@
         margin-bottom: 40px;
         font-family: 'Barlow', sans-serif;
         color: $Vddsblue;
+
+        @include mobile{
+          width: 85%;
+          font-size: 15px;
+          line-height: 1.5;
+          margin-bottom: 20px;
+        }
       }
       :nth-child(3){
         font-size: 15px;
