@@ -1,10 +1,10 @@
-.hero-section header {
+footer, .hero-section header {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.position-section .right, .position-section .left, .hero-section nav div ul, .hero-section nav div, .hero-section nav, .hero-section {
+.testimony-container div article, .testimony-container, .position-section .right, .position-section .left, .hero-section nav div ul, .hero-section nav div, .hero-section nav, .hero-section {
   display: flex;
   align-items: center;
 }
@@ -24,6 +24,7 @@
   margin-right: 30px;
   color: hsl(0, 0%, 100%);
   font-size: 15px;
+  font-family: "Barlow", sans-serif;
 }
 .hero-section nav div button {
   border: none;
@@ -32,6 +33,7 @@
   text-transform: uppercase;
   font-weight: 600;
   font-size: 12px;
+  font-family: "Fraunces", serif;
 }
 .hero-section header {
   flex-direction: column;
@@ -43,6 +45,7 @@
   letter-spacing: 5px;
   margin-bottom: 115px;
   text-transform: uppercase;
+  font-family: "Fraunces", serif;
 }
 
 .stand-out-section .right, .transform-section .left {
@@ -63,10 +66,12 @@
 }
 .transform-section .left h2 {
   font-size: 50px;
+  font-family: "Fraunces", serif;
 }
 .transform-section .left p {
   font-size: 15px;
   line-height: 1.5;
+  font-family: "Barlow", sans-serif;
 }
 .transform-section .left button {
   border: none;
@@ -76,6 +81,7 @@
   font-weight: 700;
   padding: 0 3px;
   border-bottom: 2px solid hsl(51, 100%, 49%);
+  font-family: "Fraunces", serif;
 }
 .transform-section .right {
   background: url(/images/desktop/image-transform.jpg) no-repeat;
@@ -100,10 +106,12 @@
 .stand-out-section .right h2 {
   font-size: 40px;
   font-weight: 700;
+  font-family: "Fraunces", serif;
 }
 .stand-out-section .right p {
   font-size: 15px;
   line-height: 1.5;
+  font-family: "Barlow", sans-serif;
 }
 .stand-out-section .right button {
   border: none;
@@ -113,6 +121,7 @@
   font-weight: 700;
   padding: 0 3px;
   border-bottom: 2px solid hsl(51, 100%, 49%);
+  font-family: "Fraunces", serif;
 }
 
 .position-section {
@@ -129,7 +138,7 @@
   padding-bottom: 20px;
   color: hsl(168, 34%, 41%);
   font-weight: 800;
-  font-family: "Barlow", sans-serif;
+  font-family: "Fraunces", serif;
 }
 .position-section .left p {
   width: 40%;
@@ -137,6 +146,7 @@
   font-size: 12px;
   line-height: 1.7;
   color: hsl(168, 34%, 41%);
+  font-family: "Barlow", sans-serif;
 }
 .position-section .right {
   background: url(/images/desktop/image-photography.jpg) no-repeat;
@@ -150,6 +160,7 @@
   padding-bottom: 20px;
   color: hsl(198, 62%, 26%);
   font-weight: 800;
+  font-family: "Fraunces", serif;
 }
 .position-section .right p {
   width: 40%;
@@ -157,6 +168,107 @@
   font-size: 12px;
   line-height: 1.7;
   color: hsl(198, 62%, 26%);
+  font-family: "Barlow", sans-serif;
+}
+
+.testimony-container {
+  flex-direction: column;
+  padding: 100px 0;
+}
+.testimony-container h3 {
+  font-family: "Fraunces", serif;
+  letter-spacing: 3px;
+  font-size: 15px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+.testimony-container div {
+  display: flex;
+  width: 70%;
+  gap: 30px;
+}
+.testimony-container div article {
+  flex-direction: column;
+}
+.testimony-container div article img {
+  height: 50px;
+  margin-bottom: 50px;
+  border-radius: 50%;
+}
+.testimony-container div article :nth-child(2) {
+  text-align: center;
+  width: 80%;
+  margin-bottom: 40px;
+  font-family: "Barlow", sans-serif;
+}
+.testimony-container div article :nth-child(3) {
+  font-size: 15px;
+  font-family: "Fraunces", serif;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.testimony-container div article :nth-child(4) {
+  text-align: center;
+}
+
+.pictures-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100vw;
+  overflow: hidden;
+}
+.pictures-section :nth-child(1) {
+  background: url(/images/desktop/image-gallery-milkbottles.jpg) no-repeat;
+  background-size: cover;
+  height: 70vh;
+}
+.pictures-section :nth-child(2) {
+  background: url(/images/desktop/image-gallery-orange.jpg) no-repeat;
+  background-size: cover;
+  height: 70vh;
+}
+.pictures-section :nth-child(3) {
+  background: url(/images/desktop/image-gallery-cone.jpg) no-repeat;
+  background-size: cover;
+  height: 70vh;
+}
+.pictures-section :nth-child(4) {
+  background: url(/images/desktop/image-gallery-sugarcubes.jpg) no-repeat;
+  background-size: cover;
+  height: 70vh;
+  overflow: hidden;
+}
+
+footer {
+  flex-direction: column;
+  background-color: hsl(167, 49%, 58%);
+  padding: 50px 0;
+}
+footer img {
+  margin-bottom: 30px;
+  color: hsl(168, 34%, 41%);
+}
+footer ul {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+footer ul li {
+  color: hsl(168, 34%, 41%);
+}
+footer div {
+  display: flex;
+  align-items: center;
+}
+footer div img {
+  margin-right: 15px;
+}
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+footer .attribution a {
+  color: hsl(0, 0%, 100%);
 }
 
 * {

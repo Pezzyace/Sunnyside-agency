@@ -1,0 +1,38 @@
+@import 'colors';
+
+footer{
+  @extend %flex1;
+  flex-direction: column;
+  background-color: hsl(167, 49%, 58%);
+  padding: 50px 0;
+
+  img{
+    margin-bottom: 30px;
+    color: $Dmcyan; 
+  }
+  ul{
+    display: flex;
+    gap: 50px;
+    margin-bottom: 50px;
+
+    li{
+      color: $Dmcyan;
+    }
+  }
+  div{
+    display: flex;
+    align-items: center;
+
+    img{
+      margin-right: 15px;
+    }
+  }
+  .attribution { 
+    font-size: 11px; 
+    text-align: center; 
+
+    a{
+      color: $crack;
+    }
+  }
+}

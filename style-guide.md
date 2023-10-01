@@ -31,6 +31,7 @@ The designs were created to the following widths:
 
 - Font size: 18px
 - font-family: 'Fraunces', serif;
+- font-family: 'Barlow', sans-serif;
 
 ### Font
 

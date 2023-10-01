@@ -1,0 +1,47 @@
+@import 'colors';
+
+.testimony-container{
+  @extend %flex2;
+  flex-direction: column;
+  padding: 100px 0;
+
+  h3{
+    font-family: 'Fraunces', serif;
+    letter-spacing: 3px;
+    font-size: 15px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+  }
+
+  div{
+    display: flex;
+    width: 70%;
+    gap: 30px;
+    
+    article{
+      @extend %flex2;
+      flex-direction: column;
+
+      img{
+        height: 50px;
+        margin-bottom: 50px;
+        border-radius: 50%;
+      }
+      :nth-child(2){
+        text-align: center;
+        width: 80%;
+        margin-bottom: 40px;
+        font-family: 'Barlow', sans-serif;
+      }
+      :nth-child(3){
+        font-size: 15px;
+        font-family: 'Fraunces', serif;
+        font-weight: 800;
+        margin-bottom: 10px;
+      }
+      :nth-child(4){
+        text-align: center;
+      }
+    }
+  }
+}

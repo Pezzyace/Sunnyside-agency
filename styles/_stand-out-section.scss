@@ -20,10 +20,12 @@
     h2{
       font-size: 40px;
       font-weight: 700;
+      font-family: 'Fraunces', serif;
     }
     p{
       font-size: 15px;
       line-height: 1.5;
+      font-family: 'Barlow', sans-serif;
     }
     button{
       border: none;
@@ -33,6 +35,7 @@
       font-weight: 700;
       padding: 0 3px;
       border-bottom: 2px solid $yellow;
+      font-family: 'Fraunces', serif;
     }
   }
 }
