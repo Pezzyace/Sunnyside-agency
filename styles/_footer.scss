@@ -17,6 +17,11 @@ footer{
     li{
       color: hsl(168, 45%, 32%);
       font-family: 'Barlow', sans-serif;
+      cursor: pointer;
+      transition: .5s;
+    }
+    li:hover{
+      color: $crack;
     }
   }
   div{
@@ -24,16 +29,27 @@ footer{
     align-items: center;
     margin-bottom: 50px;
 
-    img{
+    svg{
       margin-right: 15px;
+      transition: 0.5s;
+    }
+    path{
+      transition: .5s;
+      cursor: pointer;
+    }
+    path:hover{
+      fill: #ffffff;
     }
   }
   .attribution { 
     font-size: 11px; 
     text-align: center; 
+    color: hsl(168, 45%, 32%);
 
-    a{
-      color: $crack;
+    p{
+      a{
+        color: hsl(168, 45%, 32%);
+      }
     }
   }
 }

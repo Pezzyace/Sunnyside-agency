@@ -4,18 +4,34 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
   .left{
     background: url(/images/desktop/image-graphic-design.jpg) no-repeat;
     @extend %flex2;
     flex-direction: column;
 
+    @include mobile {
+      background: url(/images/mobile/image-graphic-design.jpg);
+      background-size: cover;
+      height: 80vh;
+    }
+
     h3{
       padding-top: 52%;
       font-size: 20px;
       padding-bottom: 20px;
-      color: $Dmcyan;
+      color: $Ddscyan;
       font-weight: 800;
       font-family: 'Fraunces', serif;
+
+      @include mobile {
+        padding-top: 100%;
+        font-size: 2.5rem;
+      }
     }
 
     p{
@@ -23,8 +39,15 @@
       text-align: center;
       font-size: 12px;
       line-height: 1.7;
-      color: $Dmcyan;
+      color: $Ddscyan;
       font-family: 'Barlow', sans-serif;
+
+       @include mobile {
+        width: 85%;
+        font-size: 15px;
+        line-height: 1.4;
+        font-weight: 800;
+      }
     }
   }
   .right{
@@ -34,6 +57,12 @@
     @extend %flex2;
     flex-direction: column;
 
+    @include mobile {
+      background: url(/images/mobile/image-photography.jpg);
+      background-size: cover;
+      height: 80vh;
+    }
+
     h3{
       padding-top: 52%;
       font-size: 20px;
@@ -41,6 +70,11 @@
       color: $Db;
       font-weight: 800;
       font-family: 'Fraunces', serif;
+
+      @include mobile {
+        padding-top: 100%;
+        font-size: 2.5rem;
+      }
     }
 
     p{
@@ -50,6 +84,13 @@
       line-height: 1.7;
       color: $Db;
       font-family: 'Barlow', sans-serif;
+
+      @include mobile {
+        width: 85%;
+        font-size: 15px;
+        line-height: 1.4;
+        font-weight: 800;
+      }
     }
   }
 }

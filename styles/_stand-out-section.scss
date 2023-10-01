@@ -6,9 +6,22 @@
   grid-template-columns: 1fr 1fr;
   height: 90vh;
 
+  @include mobile {
+    display: flex;
+    flex-direction: column; 
+    height: auto; 
+   }
+
   .left{
     background: url(/images/desktop/image-stand-out.jpg) no-repeat;
     background-size: auto;
+
+    @include mobile {
+      background: url(/images/mobile/image-stand-out.jpg) no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 300px; 
+     }
   }
   .right{
     @extend %flex3;
@@ -17,15 +30,37 @@
     padding: 0 100px;
     align-items: flex-start;
 
+    @include mobile {
+      padding: 0; 
+      align-items: center;
+      gap: 0;
+    }
+
     h2{
       font-size: 40px;
       font-weight: 700;
       font-family: 'Fraunces', serif;
+      color: $Vddsblue;
+
+      @include mobile {
+        text-align: center;
+        padding: 50px 0 30px;
+        font-size: 30px;
+        font-weight: 900;
+        width: 80%;
+      }
     }
     p{
       font-size: 15px;
       line-height: 1.5;
       font-family: 'Barlow', sans-serif;
+      color: $vdgb;
+
+      @include mobile {
+        text-align: center;
+        width: 75%;
+        margin-bottom: 30px;
+      }
     }
     button{
       border: none;
@@ -38,6 +73,10 @@
       font-family: 'Fraunces', serif;
       cursor: pointer;
       transition: .5s;
+
+      @include mobile {
+        margin-bottom: 50px;
+      }
     }
     button:hover{
       border-bottom: 2px solid hsl(0, 100%, 50%);

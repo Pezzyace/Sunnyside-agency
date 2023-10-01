@@ -1,4 +1,5 @@
 @import 'colors';
+@import 'media-quires';
 
 %flex1{
   display: flex;
@@ -17,46 +18,119 @@
   background: url(/images/desktop/image-header.jpg) no-repeat;
   background-size: cover;
 
+  @include mobile{
+    background: url(/images/mobile/image-header.jpg) no-repeat;
+    background-size: cover;
+    height: 72.5vh;
+  }
+
   nav{
     @extend %flex2;
     justify-content: space-between;
     width: 80%;
     padding: 30px 0;
 
-    div{
-      @extend %flex2;
+    @include mobile{
+      width: 90%;
+      margin: 0 auto;
+    }
 
-      ul{
-        @extend %flex2;
+    .hamburger{
+      display: none;
 
-        li{
-          margin-right: 30px;
-          color: $crack;
-          font-size: 15px;
-          font-family: 'Barlow', sans-serif;
+      @include mobile{
+        display: flex;
+      }
+    }
+
+
+    .mobile-nav{
+      display: none;
+
+      @include mobile{
+        display: none;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        background-color: $crack;
+        width: 90%;
+        
+        div{
+          ul{
+            li{
+              padding: 30px 0 0 0;
+              text-align: center;
+              color: $vdgb;
+              font-size: 15px;
+              font-family: 'Barlow', sans-serif;
+            }
+          }
+        }
+        button{
+          border: none;
+          padding: 15px 20px;
+          border-radius: 30px;
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: 12px;
+          font-family: 'Fraunces', serif;
+          cursor: pointer;
+          background-color: $yellow;
+          margin: 30px 0;
         }
       }
-      button{
-        border: none;
-        padding: 10px 20px;
-        border-radius: 30px;
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 12px;
-        font-family: 'Fraunces', serif;
-        cursor: pointer;
-        transition: .5s;
+    }
+
+    .desktop-nav{
+      @include mobile {
+        display: none;
       }
-      button:hover{
-        background-color: rgba(255, 255, 255, 0.2);
-        color: $crack;
-      }
+      div{
+        @extend %flex2;
+
+        ul{
+          @extend %flex2;
+
+          li{
+            margin-right: 30px;
+            color: $crack;
+            font-size: 15px;
+            font-family: 'Barlow', sans-serif;
+          }
+        }
+        button{
+          border: none;
+          padding: 10px 20px;
+          border-radius: 30px;
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: 12px;
+          font-family: 'Fraunces', serif;
+          cursor: pointer;
+          transition: .5s;
+        }
+        button:hover{
+          background-color: rgba(255, 255, 255, 0.2);
+          color: $crack;
+        }
     } 
+    }
   }
   header{
     @extend %flex1;
     flex-direction: column;
     margin-top: 70px;
+
+    @include mobile {
+      margin-top: 50px;
+    }
+
+    img{
+      @include mobile {
+        height: 100px;
+      }
+    }
 
     h1{
       color: $crack;
@@ -65,6 +139,12 @@
       margin-bottom: 115px;
       text-transform: uppercase;
       font-family: 'Fraunces', serif;
+
+      @include mobile {
+        text-align: center;
+        font-size: 3.3rem;
+        margin-bottom: 50px;
+      }
     }
   }
 }

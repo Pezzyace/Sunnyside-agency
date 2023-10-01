@@ -4,7 +4,7 @@ footer, .hero-section header {
   justify-content: center;
 }
 
-.testimony-container div article, .testimony-container, .position-section .right, .position-section .left, .hero-section nav div ul, .hero-section nav div, .hero-section nav, .hero-section {
+.testimony-container div article, .testimony-container, .position-section .right, .position-section .left, .hero-section nav .desktop-nav div ul, .hero-section nav .desktop-nav div, .hero-section nav, .hero-section {
   display: flex;
   align-items: center;
 }
@@ -15,18 +15,77 @@ footer, .hero-section header {
   background: url(/images/desktop/image-header.jpg) no-repeat;
   background-size: cover;
 }
+@media screen and (max-width: 375px) {
+  .hero-section {
+    background: url(/images/mobile/image-header.jpg) no-repeat;
+    background-size: cover;
+    height: 72.5vh;
+  }
+}
 .hero-section nav {
   justify-content: space-between;
   width: 80%;
   padding: 30px 0;
 }
-.hero-section nav div ul li {
+@media screen and (max-width: 375px) {
+  .hero-section nav {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.hero-section nav .hamburger {
+  display: none;
+}
+@media screen and (max-width: 375px) {
+  .hero-section nav .hamburger {
+    display: flex;
+  }
+}
+.hero-section nav .mobile-nav {
+  display: none;
+}
+@media screen and (max-width: 375px) {
+  .hero-section nav .mobile-nav {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    background-color: hsl(0, 0%, 100%);
+    width: 90%;
+  }
+  .hero-section nav .mobile-nav div ul li {
+    padding: 30px 0 0 0;
+    text-align: center;
+    color: hsl(213, 9%, 39%);
+    font-size: 15px;
+    font-family: "Barlow", sans-serif;
+  }
+  .hero-section nav .mobile-nav button {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    font-family: "Fraunces", serif;
+    cursor: pointer;
+    background-color: hsl(51, 100%, 49%);
+    margin: 30px 0;
+  }
+}
+@media screen and (max-width: 375px) {
+  .hero-section nav .desktop-nav {
+    display: none;
+  }
+}
+.hero-section nav .desktop-nav div ul li {
   margin-right: 30px;
   color: hsl(0, 0%, 100%);
   font-size: 15px;
   font-family: "Barlow", sans-serif;
 }
-.hero-section nav div button {
+.hero-section nav .desktop-nav div button {
   border: none;
   padding: 10px 20px;
   border-radius: 30px;
@@ -37,13 +96,23 @@ footer, .hero-section header {
   cursor: pointer;
   transition: 0.5s;
 }
-.hero-section nav div button:hover {
+.hero-section nav .desktop-nav div button:hover {
   background-color: rgba(255, 255, 255, 0.2);
   color: hsl(0, 0%, 100%);
 }
 .hero-section header {
   flex-direction: column;
   margin-top: 70px;
+}
+@media screen and (max-width: 375px) {
+  .hero-section header {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .hero-section header img {
+    height: 100px;
+  }
 }
 .hero-section header h1 {
   color: hsl(0, 0%, 100%);
@@ -53,6 +122,13 @@ footer, .hero-section header {
   text-transform: uppercase;
   font-family: "Fraunces", serif;
 }
+@media screen and (max-width: 375px) {
+  .hero-section header h1 {
+    text-align: center;
+    font-size: 3.3rem;
+    margin-bottom: 50px;
+  }
+}
 
 .stand-out-section .right, .transform-section .left {
   display: flex;
@@ -60,9 +136,16 @@ footer, .hero-section header {
 }
 
 .transform-section {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr;
   height: 90vh;
+}
+@media screen and (max-width: 375px) {
+  .transform-section {
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+  }
 }
 .transform-section .left {
   flex-direction: column;
@@ -70,14 +153,39 @@ footer, .hero-section header {
   padding: 0 100px;
   align-items: flex-start;
 }
+@media screen and (max-width: 375px) {
+  .transform-section .left {
+    padding: 0;
+    align-items: center;
+    gap: 0;
+  }
+}
 .transform-section .left h2 {
   font-size: 50px;
   font-family: "Fraunces", serif;
+  color: hsl(212, 27%, 19%);
+}
+@media screen and (max-width: 375px) {
+  .transform-section .left h2 {
+    text-align: center;
+    padding: 50px 0 30px;
+    font-size: 30px;
+    font-weight: 900;
+    width: 80%;
+  }
 }
 .transform-section .left p {
   font-size: 15px;
   line-height: 1.5;
   font-family: "Barlow", sans-serif;
+  color: hsl(213, 9%, 39%);
+}
+@media screen and (max-width: 375px) {
+  .transform-section .left p {
+    text-align: center;
+    width: 75%;
+    margin-bottom: 30px;
+  }
 }
 .transform-section .left button {
   border: none;
@@ -91,6 +199,11 @@ footer, .hero-section header {
   cursor: pointer;
   transition: 0.5s;
 }
+@media screen and (max-width: 375px) {
+  .transform-section .left button {
+    margin-bottom: 50px;
+  }
+}
 .transform-section .left button:hover {
   border-bottom: 2px solid hsl(51, 100%, 49%);
 }
@@ -98,15 +211,38 @@ footer, .hero-section header {
   background: url(/images/desktop/image-transform.jpg) no-repeat;
   background-size: auto;
 }
+@media screen and (max-width: 375px) {
+  .transform-section .right {
+    background: url(/images/mobile/image-transform.jpg) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+  }
+}
 
 .stand-out-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 90vh;
 }
+@media screen and (max-width: 375px) {
+  .stand-out-section {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+}
 .stand-out-section .left {
   background: url(/images/desktop/image-stand-out.jpg) no-repeat;
   background-size: auto;
+}
+@media screen and (max-width: 375px) {
+  .stand-out-section .left {
+    background: url(/images/mobile/image-stand-out.jpg) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+  }
 }
 .stand-out-section .right {
   flex-direction: column;
@@ -114,15 +250,40 @@ footer, .hero-section header {
   padding: 0 100px;
   align-items: flex-start;
 }
+@media screen and (max-width: 375px) {
+  .stand-out-section .right {
+    padding: 0;
+    align-items: center;
+    gap: 0;
+  }
+}
 .stand-out-section .right h2 {
   font-size: 40px;
   font-weight: 700;
   font-family: "Fraunces", serif;
+  color: hsl(212, 27%, 19%);
+}
+@media screen and (max-width: 375px) {
+  .stand-out-section .right h2 {
+    text-align: center;
+    padding: 50px 0 30px;
+    font-size: 30px;
+    font-weight: 900;
+    width: 80%;
+  }
 }
 .stand-out-section .right p {
   font-size: 15px;
   line-height: 1.5;
   font-family: "Barlow", sans-serif;
+  color: hsl(213, 9%, 39%);
+}
+@media screen and (max-width: 375px) {
+  .stand-out-section .right p {
+    text-align: center;
+    width: 75%;
+    margin-bottom: 30px;
+  }
 }
 .stand-out-section .right button {
   border: none;
@@ -136,6 +297,11 @@ footer, .hero-section header {
   cursor: pointer;
   transition: 0.5s;
 }
+@media screen and (max-width: 375px) {
+  .stand-out-section .right button {
+    margin-bottom: 50px;
+  }
+}
 .stand-out-section .right button:hover {
   border-bottom: 2px solid hsl(0, 100%, 50%);
 }
@@ -144,31 +310,65 @@ footer, .hero-section header {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+@media screen and (max-width: 375px) {
+  .position-section {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .position-section .left {
   background: url(/images/desktop/image-graphic-design.jpg) no-repeat;
   flex-direction: column;
+}
+@media screen and (max-width: 375px) {
+  .position-section .left {
+    background: url(/images/mobile/image-graphic-design.jpg);
+    background-size: cover;
+    height: 80vh;
+  }
 }
 .position-section .left h3 {
   padding-top: 52%;
   font-size: 20px;
   padding-bottom: 20px;
-  color: hsl(168, 34%, 41%);
+  color: hsl(167, 40%, 24%);
   font-weight: 800;
   font-family: "Fraunces", serif;
+}
+@media screen and (max-width: 375px) {
+  .position-section .left h3 {
+    padding-top: 100%;
+    font-size: 2.5rem;
+  }
 }
 .position-section .left p {
   width: 40%;
   text-align: center;
   font-size: 12px;
   line-height: 1.7;
-  color: hsl(168, 34%, 41%);
+  color: hsl(167, 40%, 24%);
   font-family: "Barlow", sans-serif;
+}
+@media screen and (max-width: 375px) {
+  .position-section .left p {
+    width: 85%;
+    font-size: 15px;
+    line-height: 1.4;
+    font-weight: 800;
+  }
 }
 .position-section .right {
   background: url(/images/desktop/image-photography.jpg) no-repeat;
   background-size: cover;
   height: 80vh;
   flex-direction: column;
+}
+@media screen and (max-width: 375px) {
+  .position-section .right {
+    background: url(/images/mobile/image-photography.jpg);
+    background-size: cover;
+    height: 80vh;
+  }
 }
 .position-section .right h3 {
   padding-top: 52%;
@@ -178,6 +378,12 @@ footer, .hero-section header {
   font-weight: 800;
   font-family: "Fraunces", serif;
 }
+@media screen and (max-width: 375px) {
+  .position-section .right h3 {
+    padding-top: 100%;
+    font-size: 2.5rem;
+  }
+}
 .position-section .right p {
   width: 40%;
   text-align: center;
@@ -185,6 +391,14 @@ footer, .hero-section header {
   line-height: 1.7;
   color: hsl(198, 62%, 26%);
   font-family: "Barlow", sans-serif;
+}
+@media screen and (max-width: 375px) {
+  .position-section .right p {
+    width: 85%;
+    font-size: 15px;
+    line-height: 1.4;
+    font-weight: 800;
+  }
 }
 
 .testimony-container {
@@ -197,6 +411,7 @@ footer, .hero-section header {
   font-size: 15px;
   margin-bottom: 50px;
   text-transform: uppercase;
+  color: hsl(210, 4%, 67%);
 }
 .testimony-container div {
   display: flex;
@@ -216,15 +431,18 @@ footer, .hero-section header {
   width: 80%;
   margin-bottom: 40px;
   font-family: "Barlow", sans-serif;
+  color: hsl(212, 27%, 19%);
 }
 .testimony-container div article :nth-child(3) {
   font-size: 15px;
   font-family: "Fraunces", serif;
   font-weight: 800;
   margin-bottom: 10px;
+  color: hsl(212, 27%, 19%);
 }
 .testimony-container div article :nth-child(4) {
   text-align: center;
+  color: hsl(210, 4%, 67%);
 }
 
 .pictures-section {
@@ -272,21 +490,35 @@ footer ul {
 footer ul li {
   color: hsl(168, 45%, 32%);
   font-family: "Barlow", sans-serif;
+  cursor: pointer;
+  transition: 0.5s;
+}
+footer ul li:hover {
+  color: hsl(0, 0%, 100%);
 }
 footer div {
   display: flex;
   align-items: center;
   margin-bottom: 50px;
 }
-footer div img {
+footer div svg {
   margin-right: 15px;
+  transition: 0.5s;
+}
+footer div path {
+  transition: 0.5s;
+  cursor: pointer;
+}
+footer div path:hover {
+  fill: #ffffff;
 }
 footer .attribution {
   font-size: 11px;
   text-align: center;
+  color: hsl(168, 45%, 32%);
 }
-footer .attribution a {
-  color: hsl(0, 0%, 100%);
+footer .attribution p a {
+  color: hsl(168, 45%, 32%);
 }
 
 * {
