@@ -3,4 +3,50 @@
 .position-section{
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  .left{
+    background: url(/images/desktop/image-graphic-design.jpg) no-repeat;
+    @extend %flex2;
+    flex-direction: column;
+
+    h3{
+      padding-top: 52%;
+      font-size: 20px;
+      padding-bottom: 20px;
+      color: $Dmcyan;
+      font-weight: 800;
+      font-family: 'Barlow', sans-serif;
+    }
+
+    p{
+      width: 40%;
+      text-align: center;
+      font-size: 12px;
+      line-height: 1.7;
+      color: $Dmcyan;
+    }
+  }
+  .right{
+    background: url(/images/desktop/image-photography.jpg) no-repeat;
+    background-size: cover;
+    height: 80vh;
+    @extend %flex2;
+    flex-direction: column;
+
+    h3{
+      padding-top: 52%;
+      font-size: 20px;
+      padding-bottom: 20px;
+      color: $Db;
+      font-weight: 800;
+    }
+
+    p{
+      width: 40%;
+      text-align: center;
+      font-size: 12px;
+      line-height: 1.7;
+      color: $Db;
+    }
+  }
 }

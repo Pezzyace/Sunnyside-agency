@@ -4,7 +4,7 @@
   justify-content: center;
 }
 
-.hero-section nav div ul, .hero-section nav div, .hero-section nav, .hero-section {
+.position-section .right, .position-section .left, .hero-section nav div ul, .hero-section nav div, .hero-section nav, .hero-section {
   display: flex;
   align-items: center;
 }
@@ -118,6 +118,45 @@
 .position-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+.position-section .left {
+  background: url(/images/desktop/image-graphic-design.jpg) no-repeat;
+  flex-direction: column;
+}
+.position-section .left h3 {
+  padding-top: 52%;
+  font-size: 20px;
+  padding-bottom: 20px;
+  color: hsl(168, 34%, 41%);
+  font-weight: 800;
+  font-family: "Barlow", sans-serif;
+}
+.position-section .left p {
+  width: 40%;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.7;
+  color: hsl(168, 34%, 41%);
+}
+.position-section .right {
+  background: url(/images/desktop/image-photography.jpg) no-repeat;
+  background-size: cover;
+  height: 80vh;
+  flex-direction: column;
+}
+.position-section .right h3 {
+  padding-top: 52%;
+  font-size: 20px;
+  padding-bottom: 20px;
+  color: hsl(198, 62%, 26%);
+  font-weight: 800;
+}
+.position-section .right p {
+  width: 40%;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.7;
+  color: hsl(198, 62%, 26%);
 }
 
 * {

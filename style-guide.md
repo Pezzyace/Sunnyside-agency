@@ -30,6 +30,7 @@ The designs were created to the following widths:
 ### Body Copy
 
 - Font size: 18px
+- font-family: 'Fraunces', serif;
 
 ### Font
 
