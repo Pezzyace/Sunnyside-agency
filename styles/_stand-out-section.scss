@@ -34,8 +34,13 @@
       text-transform: uppercase;
       font-weight: 700;
       padding: 0 3px;
-      border-bottom: 2px solid $yellow;
+      border-bottom: 2px solid $sred;
       font-family: 'Fraunces', serif;
+      cursor: pointer;
+      transition: .5s;
+    }
+    button:hover{
+      border-bottom: 2px solid hsl(0, 100%, 50%);
     }
   }
 }

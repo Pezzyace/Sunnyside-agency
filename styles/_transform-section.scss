@@ -28,13 +28,18 @@
     }
     button{
       border: none;
-      background-color: $crack;
+      background-color: transparent;
       font-size: 13px;
       text-transform: uppercase;
       font-weight: 700;
       padding: 0 3px;
-      border-bottom: 2px solid $yellow;
+      border-bottom: 2px solid hsl(51, 100%, 49%, 0.5);
       font-family: 'Fraunces', serif;
+      cursor: pointer;
+      transition: .5s;
+    }
+    button:hover{
+      border-bottom: 2px solid $yellow;
     }
   }
 

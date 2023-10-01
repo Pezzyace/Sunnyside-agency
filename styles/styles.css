@@ -34,6 +34,12 @@ footer, .hero-section header {
   font-weight: 600;
   font-size: 12px;
   font-family: "Fraunces", serif;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.hero-section nav div button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: hsl(0, 0%, 100%);
 }
 .hero-section header {
   flex-direction: column;
@@ -75,13 +81,18 @@ footer, .hero-section header {
 }
 .transform-section .left button {
   border: none;
-  background-color: hsl(0, 0%, 100%);
+  background-color: transparent;
   font-size: 13px;
   text-transform: uppercase;
   font-weight: 700;
   padding: 0 3px;
-  border-bottom: 2px solid hsl(51, 100%, 49%);
+  border-bottom: 2px solid hsla(51, 100%, 49%, 0.5);
   font-family: "Fraunces", serif;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.transform-section .left button:hover {
+  border-bottom: 2px solid hsl(51, 100%, 49%);
 }
 .transform-section .right {
   background: url(/images/desktop/image-transform.jpg) no-repeat;
@@ -120,8 +131,13 @@ footer, .hero-section header {
   text-transform: uppercase;
   font-weight: 700;
   padding: 0 3px;
-  border-bottom: 2px solid hsl(51, 100%, 49%);
+  border-bottom: 2px solid hsl(7, 99%, 70%);
   font-family: "Fraunces", serif;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.stand-out-section .right button:hover {
+  border-bottom: 2px solid hsl(0, 100%, 50%);
 }
 
 .position-section {
@@ -216,6 +232,7 @@ footer, .hero-section header {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   width: 100vw;
   overflow: hidden;
+  position: relative;
 }
 .pictures-section :nth-child(1) {
   background: url(/images/desktop/image-gallery-milkbottles.jpg) no-repeat;
@@ -242,11 +259,10 @@ footer, .hero-section header {
 footer {
   flex-direction: column;
   background-color: hsl(167, 49%, 58%);
-  padding: 50px 0;
+  padding: 50px 0 0 0;
 }
-footer img {
+footer svg {
   margin-bottom: 30px;
-  color: hsl(168, 34%, 41%);
 }
 footer ul {
   display: flex;
@@ -254,11 +270,13 @@ footer ul {
   margin-bottom: 50px;
 }
 footer ul li {
-  color: hsl(168, 34%, 41%);
+  color: hsl(168, 45%, 32%);
+  font-family: "Barlow", sans-serif;
 }
 footer div {
   display: flex;
   align-items: center;
+  margin-bottom: 50px;
 }
 footer div img {
   margin-right: 15px;

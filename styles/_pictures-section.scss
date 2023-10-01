@@ -5,6 +5,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   width: 100vw;
   overflow: hidden;
+  position: relative;
 
   :nth-child(1){
     background: url(/images/desktop/image-gallery-milkbottles.jpg) no-repeat;
