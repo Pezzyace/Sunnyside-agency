@@ -1,0 +1,61 @@
+@import 'colors';
+
+%flex1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+%flex2{
+  display: flex;
+  align-items: center;
+}
+
+.hero-section{
+  @extend %flex2;
+  flex-direction: column;
+  height: 100vh;
+  background: url(/images/desktop/image-header.jpg) no-repeat;
+  background-size: cover;
+
+  nav{
+    @extend %flex2;
+    justify-content: space-between;
+    width: 80%;
+    padding: 30px 0;
+
+    div{
+      @extend %flex2;
+
+      ul{
+        @extend %flex2;
+
+        li{
+          margin-right: 30px;
+          color: $crack;
+          font-size: 15px;
+        }
+      }
+      button{
+        border: none;
+        padding: 10px 20px;
+        border-radius: 30px;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 12px;
+      }
+    } 
+  }
+  header{
+    @extend %flex1;
+    flex-direction: column;
+    margin-top: 70px;
+
+    h1{
+      color: $crack;
+      font-size: 3rem;
+      letter-spacing: 5px;
+      margin-bottom: 115px;
+      text-transform: uppercase;
+    }
+  }
+}

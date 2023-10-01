@@ -1,0 +1,38 @@
+@import 'colors';
+
+
+.stand-out-section{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 90vh;
+
+  .left{
+    background: url(/images/desktop/image-stand-out.jpg) no-repeat;
+    background-size: auto;
+  }
+  .right{
+    @extend %flex3;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 100px;
+    align-items: flex-start;
+
+    h2{
+      font-size: 40px;
+      font-weight: 700;
+    }
+    p{
+      font-size: 15px;
+      line-height: 1.5;
+    }
+    button{
+      border: none;
+      background-color: $crack;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 0 3px;
+      border-bottom: 2px solid $yellow;
+    }
+  }
+}

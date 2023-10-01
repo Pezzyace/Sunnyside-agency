@@ -1,0 +1,42 @@
+@import 'colors';
+
+
+%flex3{
+  display: flex;
+  justify-content: center;
+}
+.transform-section{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 90vh;
+
+  .left{
+    @extend %flex3;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 100px;
+    align-items: flex-start;
+
+    h2{
+      font-size: 50px;
+    }
+    p{
+      font-size: 15px;
+      line-height: 1.5;
+    }
+    button{
+      border: none;
+      background-color: $crack;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 0 3px;
+      border-bottom: 2px solid $yellow;
+    }
+  }
+
+  .right{
+    background: url(/images/desktop/image-transform.jpg) no-repeat;
+    background-size: auto;
+  }
+}

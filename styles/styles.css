@@ -1,0 +1,129 @@
+.hero-section header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-section nav div ul, .hero-section nav div, .hero-section nav, .hero-section {
+  display: flex;
+  align-items: center;
+}
+
+.hero-section {
+  flex-direction: column;
+  height: 100vh;
+  background: url(/images/desktop/image-header.jpg) no-repeat;
+  background-size: cover;
+}
+.hero-section nav {
+  justify-content: space-between;
+  width: 80%;
+  padding: 30px 0;
+}
+.hero-section nav div ul li {
+  margin-right: 30px;
+  color: hsl(0, 0%, 100%);
+  font-size: 15px;
+}
+.hero-section nav div button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+}
+.hero-section header {
+  flex-direction: column;
+  margin-top: 70px;
+}
+.hero-section header h1 {
+  color: hsl(0, 0%, 100%);
+  font-size: 3rem;
+  letter-spacing: 5px;
+  margin-bottom: 115px;
+  text-transform: uppercase;
+}
+
+.stand-out-section .right, .transform-section .left {
+  display: flex;
+  justify-content: center;
+}
+
+.transform-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 90vh;
+}
+.transform-section .left {
+  flex-direction: column;
+  gap: 30px;
+  padding: 0 100px;
+  align-items: flex-start;
+}
+.transform-section .left h2 {
+  font-size: 50px;
+}
+.transform-section .left p {
+  font-size: 15px;
+  line-height: 1.5;
+}
+.transform-section .left button {
+  border: none;
+  background-color: hsl(0, 0%, 100%);
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0 3px;
+  border-bottom: 2px solid hsl(51, 100%, 49%);
+}
+.transform-section .right {
+  background: url(/images/desktop/image-transform.jpg) no-repeat;
+  background-size: auto;
+}
+
+.stand-out-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 90vh;
+}
+.stand-out-section .left {
+  background: url(/images/desktop/image-stand-out.jpg) no-repeat;
+  background-size: auto;
+}
+.stand-out-section .right {
+  flex-direction: column;
+  gap: 30px;
+  padding: 0 100px;
+  align-items: flex-start;
+}
+.stand-out-section .right h2 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.stand-out-section .right p {
+  font-size: 15px;
+  line-height: 1.5;
+}
+.stand-out-section .right button {
+  border: none;
+  background-color: hsl(0, 0%, 100%);
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0 3px;
+  border-bottom: 2px solid hsl(51, 100%, 49%);
+}
+
+.position-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}/*# sourceMappingURL=styles.css.map */
