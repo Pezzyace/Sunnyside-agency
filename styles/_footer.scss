@@ -63,10 +63,16 @@ footer{
     font-size: 11px; 
     text-align: center; 
     color: hsl(168, 45%, 32%);
+    display: flex;
+    gap: 10px;
 
     p{
       a{
         color: hsl(168, 45%, 32%);
+        
+      }
+      A:hover{
+        text-decoration: underline;
       }
     }
   }

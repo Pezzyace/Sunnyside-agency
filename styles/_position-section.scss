@@ -13,6 +13,11 @@
     background: url(/images/desktop/image-graphic-design.jpg) no-repeat;
     @extend %flex2;
     flex-direction: column;
+    background-size: cover;
+    height: 80vh;
+    @extend %flex2;
+    flex-direction: column;
+
 
     @include mobile {
       background: url(/images/mobile/image-graphic-design.jpg);

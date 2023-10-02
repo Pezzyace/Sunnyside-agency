@@ -6,7 +6,6 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   width: 100vw;
   overflow: hidden;
-  position: relative;
   
   @include mobile{
     grid-template-columns: 1fr 1fr;

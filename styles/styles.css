@@ -153,7 +153,7 @@ footer, .hero-section header {
 }
 
 .transform-section {
-  display: flex;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   height: 90vh;
 }
@@ -336,6 +336,9 @@ footer, .hero-section header {
 .position-section .left {
   background: url(/images/desktop/image-graphic-design.jpg) no-repeat;
   flex-direction: column;
+  background-size: cover;
+  height: 80vh;
+  flex-direction: column;
 }
 @media screen and (max-width: 375px) {
   .position-section .left {
@@ -498,7 +501,6 @@ footer, .hero-section header {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   width: 100vw;
   overflow: hidden;
-  position: relative;
 }
 @media screen and (max-width: 375px) {
   .pictures-section {
@@ -609,9 +611,14 @@ footer .attribution {
   font-size: 11px;
   text-align: center;
   color: hsl(168, 45%, 32%);
+  display: flex;
+  gap: 10px;
 }
 footer .attribution p a {
   color: hsl(168, 45%, 32%);
+}
+footer .attribution p A:hover {
+  text-decoration: underline;
 }
 
 * {
